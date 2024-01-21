@@ -1,0 +1,284 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.cdnfonts.com/css/gobold');
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: 5px;
+    text-shadow: 5px 5px 5px rgb(0 0 0 / 50%);
+    font-family: 'Gobold Thin', sans-serif;
+}
+h2 {
+    font-size: 1.75rem;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.buttonFunate button{
+    border-radius: 50px;
+    padding: 5px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #24463e00;
+    border: 3px solid white;
+    color: white;
+    box-shadow: 0px 6px 14px 4px rgb(0 0 0 / 50%);
+}
+
+
+/* MENÚ NAV */
+nav {
+    box-shadow: 1px 11px 14px 4px rgb(0 0 0 / 50%);
+    background-color: black;
+    z-index: 1045;
+}
+.logo {
+    width: 80px;
+}
+.titleFunaland{
+    width: 25%;
+}
+
+/* NAV HAMBURGUESA MÓVIL */
+.navbar-nav li, .navbar-nav li a {
+    padding: 10px;
+}
+.navbar-nav li a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+/* SOCIAL */
+.social {
+    margin-bottom: 60px;
+}
+.social p {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.links-redes {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.links-redes a {
+    margin: 0 10px;
+    border: 2px solid #ffffff;
+}
+.links-redes a i {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+.discord,
+.twitch,
+.correo,
+.ig {
+    background: #24463E;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-brand:hover,
+.discord:hover,
+.ig:hover,
+.logo:hover,
+.twitch:hover,
+.correo:hover {
+    -webkit-transform: rotate(360deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* MAIN / CUERPO */
+.showcase {
+    height: 79vh;
+    background: url(../img/banner-1_fondo_horizontal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 30px;
+}
+
+.titles img{
+    width: 50%;
+}
+
+/* CONTADOR */
+.container .row{
+    justify-content: center;
+    margin-top: -3em;
+}
+#time {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+#time .circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle svg {
+    transform: rotate(270deg);
+}
+#time .circle svg circle {
+    fill: transparent;
+    stroke-width: 8;
+    stroke: black;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+#time .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+#time div {
+    position: absolute;
+    top: 25px;
+    font-size: 40px;
+}
+#time div.circle {
+    box-shadow: 0px 6px 14px 4px rgb(0 0 0 / 50%);
+}
+#time div span {
+    position: absolute;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 0.35em;
+    margin-top: 10px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+#time div p {
+    margin-bottom: -54px;
+}
+.circle {
+    background-color: #0000004d;
+    border-radius: 80px;
+}
+
+/* FOOTER */
+.footer {
+    color: #616161;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media(max-width:525px) {
+    .titleFunaland {
+        width: 50%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    #time {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0em !important;
+    }
+    #time .circle {
+        width: 150px;
+        margin: auto;
+    }
+    .showcase{
+        justify-content: space-around;
+        padding: 0;
+        font-size: 15px;
+    }
+}
+
+@media(max-width:992px) {
+    #time{
+        padding: 0 1em;
+    }
+    .col-md-3 {
+        width: 50%;
+    }
+    .navbar>.container-fluid{
+        flex-wrap: nowrap;
+    }
+}
+
+@media(min-width:992px) {
+    nav {
+        height: 102px;
+    }
+    .content-img {
+        object-fit: contain;
+        padding: 10px 0px 10px 40px;
+    }
+    .col-md-6 {
+        width: 70%;
+    }
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: 100%;
+        justify-content: space-between;
+        padding-right: 7%;
+    }
+}
+
+@media(min-width:1024px) {
+}
+
+@media(min-width:1280px) {
+    .col-md-6 {
+        width: 50%;
+    }
+}
+
+@media(min-width:1440px) {
+    nav .container-fluid {
+        padding-left: 7%;
+    }
+}
+
+@media(min-width:1920px) {
+    nav .container-fluid {
+        padding-left: 15%;
+        padding-right: 9%;
+    }
+}
